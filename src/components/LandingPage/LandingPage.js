@@ -10,10 +10,10 @@ const LandingPage = () => {
                 </button>
             </div>
             <div className="landingPage-options">
-                <button>
+                <button className="landingPage-btn">
                     Rewards
                 </button>
-                <button>
+                <button className="landingPage-btn">
                     Get Started
                 </button>
             </div>
