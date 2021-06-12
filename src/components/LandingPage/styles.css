@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%; /* <--- Extends height to max allowed from outer containing div. Allows WaitLESS big to be in the middle */
 }
 
 .landingPage .waitless-big {

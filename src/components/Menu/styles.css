@@ -1,3 +1,19 @@
+.menu {
+    height: 100%;
+    width: 90%;
+    max-width: 1024px; /* This and margin keeps menu features in the middle of screen */
+    margin: auto;
+}
+
+/* Search filter includes the search bar and filter option */
+.search-filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 120px;
+}
+
 .meal-cards {
     display: flex;
     flex-direction: row;
