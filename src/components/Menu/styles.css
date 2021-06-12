@@ -1,3 +1,4 @@
+/**** MENU BASE STYLING ****/
 .menu {
     height: 100%;
     width: 90%;
@@ -5,6 +6,7 @@
     margin: auto;
 }
 
+/**** SEARCH/FILTER STYLING ****/
 /* Search filter includes the search bar and filter option */
 .search-filter {
     display: flex;
@@ -14,6 +16,8 @@
     height: 120px;
 }
 
+
+/**** MENU CARDS STYLING ****/
 .meal-cards {
     display: flex;
     flex-direction: row;
@@ -27,6 +31,7 @@
     justify-content: space-between;
 }
 
+/**** CART STYLING ****/
 .cart {
     background-color: grey;
     border: 40px solid grey;

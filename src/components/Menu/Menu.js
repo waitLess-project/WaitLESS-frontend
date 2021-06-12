@@ -35,6 +35,7 @@ const Menu = () => {
       <div className="search-filter">
         <form>
           <input
+            className="search-bar"
             type="text"
             label="searchBar"
             placeholder="enter an item"
@@ -44,7 +45,10 @@ const Menu = () => {
           />
           <input type="submit" />
         </form>
-        <select onChange={(e) => setFilter(e.target.value)}>
+        <select
+          className="filter-by"
+          onChange={(e) => setFilter(e.target.value)}
+        >
           <option value="specials">Specials</option>
           <option value="breakfast">Breakfast</option>
           <option value="brunch">Brunch</option>
