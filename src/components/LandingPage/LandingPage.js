@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './styles.css'
 
 const LandingPage = () => {
@@ -13,9 +14,11 @@ const LandingPage = () => {
                 <button className="landingPage-btn">
                     Rewards
                 </button>
-                <button className="landingPage-btn">
+                <Link to="/menu">
+                    <button className="landingPage-btn" style={{"cursor": "pointer"}}>
                     Get Started
-                </button>
+                    </button>                
+                </Link>
             </div>
         </div>
     )
