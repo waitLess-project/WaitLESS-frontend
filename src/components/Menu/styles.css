@@ -1,0 +1,18 @@
+.meal-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart {
+    background-color: grey;
+    border: 40px solid grey;
+    margin-bottom: auto;
+}
