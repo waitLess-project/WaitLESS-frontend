@@ -10,7 +10,12 @@
     max-width: inherit;
 }
 
-.mealcard .meal-image-div .meal-image {
+img {
+    width: 300px;
+    height: 300px;
+}
+
+.mealcard {
     max-width: inherit;
     /* max-height: auto; */
 }
