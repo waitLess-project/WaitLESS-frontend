@@ -5,6 +5,7 @@ const Menu = () => {
     const [search, setSearch] = useState("")
     const [filter, setFilter] = useState("")
     const [meals, setMeals] = useState([])
+    const [order, setOrder] = useState([])
 
     const fetchMeals = () => {
         fetch("http://localhost:3000/meals").then(res => res.json())
@@ -14,6 +15,8 @@ const Menu = () => {
     useEffect(() => {
         fetchMeals()
     }, [])
+
+    getOrders = () => meals.filter(meal => order.includes(meal.id))
 
     return (
         <div className="menu">
@@ -36,7 +39,7 @@ const Menu = () => {
                     <option value="dinner">Dinner</option>
                 </select>
             </div>
-            <div className="">
+            <div className="menu-view">
                 <div>
                     {meals.map(meal => <MealCard meal={meal} key={meal.id} />)}
                 </div>
