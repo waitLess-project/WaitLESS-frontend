@@ -23,10 +23,10 @@ const Menu = () => {
   //adds a meal to the order
   const addToOrder = (id) => {
     if (!order.has(id)) {
-      setOrder((order) => order.set(id, 1));
+      setOrder(new Map(order.set(id, 1)));
     } else {
       let newQty = order.get(id) + 1;
-      setOrder((prevState) => prevState.set(id, newQty));
+      setOrder(new Map(order.set(id, newQty)));
     }
   };
 
