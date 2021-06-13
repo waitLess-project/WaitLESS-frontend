@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import MealCard from "../MealCard/MealCard";
 import "./styles.css";
 
@@ -32,6 +33,14 @@ const Menu = () => {
 
   //gets the orders from the state
   const getOrders = () => meals.filter((meal) => order.has(meal.id));
+
+  const getTotal = () => {
+    let total = 0;
+    for (let [key, value] of order) {
+      total += meals[key].price * value;
+    }
+    return total.toFixed(2);
+  };
 
   return (
     <div className="menu">
@@ -70,12 +79,25 @@ const Menu = () => {
           ))}
         </div>
         <div className="cart">
-          <h4>CART/ORDER</h4>
-          <ul>
-            {getOrders().map((order) => (
-              <li key={order.id}>{order.title}</li>
-            ))}
-          </ul>
+          <div>
+            <h4>CART/ORDER</h4>
+            <ul>
+              {getOrders().map((item) => (
+                <li key={item.id}>
+                  {item.title} - Qty: {order.get(item.id)}
+                </li>
+              ))}
+            </ul>
+            <div>
+              <h4>TOTAL</h4>
+              <span>$ {getTotal()}</span>
+            </div>
+          </div>
+          <Link to="/checkout">
+            <button className="checkout-btn" style={{ cursor: "pointer" }}>
+              Checkout
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -76,7 +76,26 @@
 
 /**** CART STYLING ****/
 .cart {
+    width: 300px;
     background-color: grey;
-    border: 40px solid grey;
     margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.cart ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cart h4 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cart li {
+    text-align: right;
+    padding: 5px 0;
 }

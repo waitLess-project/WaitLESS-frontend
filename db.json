@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Personal Pizza",
       "description": "Pizza",
-      "price": 8.50,
+      "price": 8.5,
       "img_url": "https://www.tupperware.com/media/catalog/product/cache/cc1638c5ec2e36c023d5a0908daf3cdb/p/e/perfectpersonalpizza.jpg"
     },
     {
@@ -18,58 +18,59 @@
       "id": 3,
       "title": "Tower O' Rings",
       "description": "Tower of an appetizer",
-      "price": 8.50,
+      "price": 8.5,
       "img_url": "http://images.foodmento.com/U3P4945F41270-1479851435-806.jpg"
     },
     {
       "id": 4,
       "title": "Krabby Meal",
       "description": "Only the best fresh from Bikini Bottom",
-      "price": 3.50,
+      "price": 3.5,
       "img_url": "https://www.keyingredient.com/media/57/23/f5d18ba112063839f18737e66cb7df76c0b3.jpg/rh/the-krabby-patty-yes-the-real-one-well-my-version.jpg"
     },
     {
       "id": 5,
       "title": "Luxury Sundae",
       "description": "It's rich, luxurious, and creamy.",
-      "price": 12.00,
+      "price": 12,
       "img_url": "https://static01.nyt.com/images/2017/06/12/dining/00Icecream11/00Icecream11-articleLarge.jpg"
     },
     {
       "id": 6,
       "title": "Loaf of Bread",
       "description": "So Fresh. So Good. Bread.",
-      "price": 2.00,
+      "price": 2,
       "img_url": "https://bake-eat-repeat.com/wp-content/uploads/2020/04/White-Bread-Recipe-2-copy-720x720.jpg"
     },
     {
       "id": 7,
       "title": "Loaf of Bread",
       "description": "So Fresh. So Good. Bread.",
-      "price": 2.00,
+      "price": 2,
       "img_url": "https://bake-eat-repeat.com/wp-content/uploads/2020/04/White-Bread-Recipe-2-copy-720x720.jpg"
     },
     {
       "id": 8,
       "title": "Loaf of Bread",
       "description": "So Fresh. So Good. Bread.",
-      "price": 2.00,
+      "price": 2,
       "img_url": "https://bake-eat-repeat.com/wp-content/uploads/2020/04/White-Bread-Recipe-2-copy-720x720.jpg"
     },
     {
       "id": 9,
       "title": "Loaf of Bread",
       "description": "So Fresh. So Good. Bread.",
-      "price": 2.00,
+      "price": 2,
       "img_url": "https://bake-eat-repeat.com/wp-content/uploads/2020/04/White-Bread-Recipe-2-copy-720x720.jpg"
     },
     {
       "id": 10,
       "title": "Loaf of Bread",
       "description": "So Fresh. So Good. Bread.",
-      "price": 2.00,
+      "price": 2,
       "img_url": "https://bake-eat-repeat.com/wp-content/uploads/2020/04/White-Bread-Recipe-2-copy-720x720.jpg"
     }
   ],
-  "orders": []
+  "currentOrder": [
+  ]
 }
