@@ -2,6 +2,7 @@ import {  Route, Switch } from 'react-router-dom'
 import Footer from "./components/Footer/Footer";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Menu from './components/Menu/Menu';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -16,9 +17,13 @@ function App() {
             <Route path="/menu">
               <Menu />
             </Route>
+            <Route path="/checkout">
+              <Checkout />
+            </Route>
             <Route path="/">
               <LandingPage />
             </Route>
+            
           </Switch>
         </div>
       <Footer />
