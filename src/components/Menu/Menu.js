@@ -23,7 +23,12 @@ const Menu = () => {
   //adds a meal to the order
   const addToOrder = (id) => {
     if (!order.includes(id)) {
-      setOrder((order) => [...order, id]);
+      setOrder((order) => [...order, {id: id, qty: 1}]);
+    } else {
+      // iterate through order, find order with specific id, update quantity
+      // set temp object to the order with updated quantity
+      // setOrder(tempObject)
+
     }
   };
 
@@ -70,7 +75,7 @@ const Menu = () => {
           <h4>CART/ORDER</h4>
           <ul>
             {getOrders().map((order) => (
-              <li>{order.title}</li>
+              <li key={order.id}>{order.title}</li>
             ))}
           </ul>
         </div>

@@ -4,6 +4,7 @@ import './styles.css'
 const MealCard = ({ meal, addToOrder, order }) => {
     const [showDetails, setShowDetails] = useState(false)
 
+
     return (
         <div className="mealcard">
             <div className="meal-image-div">
