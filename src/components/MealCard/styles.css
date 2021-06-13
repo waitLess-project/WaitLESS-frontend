@@ -1,5 +1,4 @@
 .mealcard {
-    max-width: 350px;
     border: 1px solid grey;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -7,12 +6,12 @@
 }
 
 .mealcard .meal-image-div {
-    max-width: inherit;
+    display: flex;
 }
-
-.mealcard .meal-image-div .meal-image {
-    max-width: inherit;
-    /* max-height: auto; */
+.mealcard .meal-image-div img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
 }
 
 .flex-row {
@@ -23,4 +22,9 @@
 
 .center-text {
     text-align: center;
+}
+
+.center-text p {
+    word-wrap: wrap;
+    font-size: .5rem;
 }
