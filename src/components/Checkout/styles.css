@@ -1,0 +1,81 @@
+.checkout {
+  text-align: center;
+}
+z .order-header {
+  text-align: center;
+}
+
+.box-outer {
+  height: 550px;
+  width: 500px;
+  border: 1px solid rgb(2, 2, 2);
+  margin: auto;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: wrap;
+  justify-content: space-around;
+  height: 50px;
+  width: 400px;
+  border: 1px solid rgb(2, 2, 2);
+  margin: 20px;
+  padding: 20px;
+}
+
+.item {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  width: 300px;
+  height: 50px;
+  border: 1px solid rgb(2, 2, 2);
+  border-radius: 18px;
+}
+.cost {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  width: 100px;
+  height: 50px;
+  border: 1px solid rgb(2, 2, 2);
+  margin-left: 20px;
+}
+
+.additional {
+  width: 400px;
+  height: 50px;
+  border: 1px solid rgb(2, 2, 2);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  margin: 20px;
+  padding: 0 20px 0;
+}
+
+.credit-card {
+  width: 400px;
+  height: 250px;
+  border: 1px solid rgb(2, 2, 2);
+  margin: 20px;
+  padding: 0 20px 0;
+}
+
+.credit-text {
+  margin: 8px;
+}
+
+.button {
+  height: 30px;
+  width: auto;
+  border-radius: 18px;
+  background-color: #53534e;
+  border: 2px solid rgb(2, 2, 2);
+  color: rgb(223, 220, 198);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: auto 20px;
+  cursor: pointer;
+  justify-content: center;
+}
