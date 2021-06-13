@@ -9,7 +9,13 @@
 }
 
 .footer-btn {
-    border-radius: 5px;
-    padding: 10px;
-    font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: #daab45;
+  border: 1px solid #daab45;
+  color: rgb(14, 13, 13);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
