@@ -6,7 +6,7 @@ const Menu = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("");
   const [meals, setMeals] = useState([]);
-  const [order, setOrder] = useState([]);
+  const [order, setOrder] = useState(new Map());
 
   //fetches the meals
   const fetchMeals = () => {
@@ -22,18 +22,16 @@ const Menu = () => {
 
   //adds a meal to the order
   const addToOrder = (id) => {
-    if (!order.includes(id)) {
-      setOrder((order) => [...order, {id: id, qty: 1}]);
+    if (!order.has(id)) {
+      setOrder((order) => order.set(id, 1));
     } else {
-      // iterate through order, find order with specific id, update quantity
-      // set temp object to the order with updated quantity
-      // setOrder(tempObject)
-
+      let newQty = order.get(id) + 1;
+      setOrder((prevState) => prevState.set(id, newQty));
     }
   };
 
   //gets the orders from the state
-  const getOrders = () => meals.filter((meal) => order.includes(meal.id));
+  const getOrders = () => meals.filter((meal) => order.has(meal.id));
 
   return (
     <div className="menu">
@@ -80,7 +78,6 @@ const Menu = () => {
           </ul>
         </div>
       </div>
-      
     </div>
   );
 };

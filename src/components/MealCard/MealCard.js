@@ -4,6 +4,7 @@ import './styles.css'
 const MealCard = ({ meal, addToOrder, order }) => {
     const [showDetails, setShowDetails] = useState(false)
 
+    
 
     return (
         <div className="mealcard">
@@ -23,8 +24,8 @@ const MealCard = ({ meal, addToOrder, order }) => {
                     </div>
                     <div className="flex-row">
                         <h3>${meal.price}</h3>
-                        <button onClick={_ => addToOrder(meal.id)}>
-                            {order.includes(meal.id) ? "✅ Added to Order" : "Add To Order"}
+                        <button onClick={() => addToOrder(meal.id)}>
+                            {order.has(meal.id) ? "✅ Added to Order" : "Add To Order"}
                         </button>
                     </div>
                 </>
