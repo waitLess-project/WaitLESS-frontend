@@ -2,16 +2,25 @@ import React from "react";
 import "./styles.css";
 import { useHistory } from "react-router-dom";
 
-const Checkout = () => {
+const Checkout = ({ order, meals }) => {
   const history = useHistory();
+
+  const checkoutItems = () => {
+    return order.forEach((key, value) => {
+      return (
+        <div className="item-container">
+          <div className="item">{meals[key].title}</div>
+          <div className="cost">cost</div>
+        </div>
+      );
+    });
+  };
+
   return (
     <div className="checkout">
       <h1 className="order-header">Order Details</h1>
       <div className="box-outer">
-        <div className="item-container">
-          <div className="item">Item, Qty</div>
-          <div className="cost">cost</div>
-        </div>
+        {checkoutItems()}
         <div className="additional">Subtotal, taxes, charges </div>
         <div className="credit-card">
           <h3 className="heading-3">Credit card checkout</h3>
@@ -35,13 +44,12 @@ const Checkout = () => {
             <button className="button">Checkout </button>
           </form>
         </div>
-        <button
-          className="button"
-          onClick={() => history.push("/menu", { from: "HomePage" })}
-        >
+        <button className="button" onClick={() => history.push("/menu")}>
           Go Back
         </button>
-        <button className="button">Place Order</button>
+        <button className="button" onClick={() => history.push("/")}>
+          Place Order
+        </button>
       </div>
     </div>
   );
