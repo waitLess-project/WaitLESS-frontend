@@ -3,44 +3,17 @@ import { Link } from "react-router-dom";
 import MealCard from "../MealCard/MealCard";
 import "./styles.css";
 
-const Menu = () => {
-  const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState("");
-  const [meals, setMeals] = useState([]);
-  const [order, setOrder] = useState(new Map());
-
-  //fetches the meals
-  const fetchMeals = () => {
-    fetch("http://localhost:3000/meals")
-      .then((res) => res.json())
-      .then(setMeals);
-  };
-
-  //to fetch the meals when this component is opened
-  useEffect(() => {
-    fetchMeals();
-  }, []);
-
-  //adds a meal to the order
-  const addToOrder = (id) => {
-    if (!order.has(id)) {
-      setOrder(new Map(order.set(id, 1)));
-    } else {
-      let newQty = order.get(id) + 1;
-      setOrder(new Map(order.set(id, newQty)));
+const Menu = ({ order, meals, search, filter, addToOrder }) => {
+  const getTotal = () => {
+    let total = 0;
+    for (let [key, value] of order) {
+      total += meals[key-1].price * value;
     }
+    return total.toFixed(2);
   };
 
   //gets the orders from the state
   const getOrders = () => meals.filter((meal) => order.has(meal.id));
-
-  const getTotal = () => {
-    let total = 0;
-    for (let [key, value] of order) {
-      total += meals[key].price * value;
-    }
-    return total.toFixed(2);
-  };
 
   return (
     <div className="menu">
@@ -53,14 +26,11 @@ const Menu = () => {
             placeholder="enter an item"
             name="searchBar"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => search(e.target.value)}
           />
           <input type="submit" />
         </form>
-        <select
-          className="filter-by"
-          onChange={(e) => setFilter(e.target.value)}
-        >
+        <select className="filter-by" onChange={(e) => filter(e.target.value)}>
           <option value="specials">Specials</option>
           <option value="breakfast">Breakfast</option>
           <option value="brunch">Brunch</option>
@@ -93,7 +63,7 @@ const Menu = () => {
               <span>$ {getTotal()}</span>
             </div>
           </div>
-          <Link to="/checkout">
+          <Link to="/checkout" props={order}>
             <button className="checkout-btn" style={{ cursor: "pointer" }}>
               Checkout
             </button>
