@@ -15,7 +15,7 @@ const Checkout = () => {
         <div className="additional">Subtotal, taxes, charges </div>
         <div className="credit-card">
           <h3 className="heading-3">Credit card checkout</h3>
-          <form>
+          <form className='form-credit'>
             <label className="credit-text">Cardholder's Name</label>
             <input type="text" name="name" className="credit-text" />
             <br />
@@ -37,7 +37,7 @@ const Checkout = () => {
         </div>
         <button
           className="button"
-          onClick={() => history.push("/about", { from: "HomePage" })}
+          onClick={() => history.push("/menu", { from: "HomePage" })}
         >
           Go Back
         </button>

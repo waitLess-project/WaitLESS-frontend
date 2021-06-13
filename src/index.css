@@ -29,6 +29,7 @@ code {
   display: flex;
   flex-flow: column;
   height: 100%;
+  background: linear-gradient(#1f1f1e,#BF953F, #daab45,#BF953F, #1f1f1e 100%)
 }
 
 .App .footer {
