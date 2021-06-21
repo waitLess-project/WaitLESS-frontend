@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import LandingPage from "./components/LandingPage/LandingPage";
+import LandingPage from "./pages/landing/LandingPage";
 import Menu from "./components/Menu/Menu";
 import Checkout from "./components/Checkout/Checkout";
 
