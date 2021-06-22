@@ -40,6 +40,7 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route exact path="/" component={LandingPage}></Route>
           <Route path="*" component={NotFoundModule}></Route>
           <Route exact path="/about">{/* <About /> */}</Route>
           <Route exact path="/menu">
@@ -48,7 +49,7 @@ function App() {
           <Route exact path="/checkout">
             <CheckoutModule order={order} meals={meals}/>
           </Route>
-          <Route exact path="/" component={LandingPage}></Route>
+          
         </Switch>
       </div>
       <Footer />
