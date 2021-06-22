@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
-import LandingPage from "../app/modules/landing/landing.module";
+import LandingPage from "./modules/landing/landing.module";
 import Menu from "../components/Menu/Menu";
 import CheckoutModule from "./modules/checkout/checkout.module";
+import NotFoundModule from '../app/layout/not-found/not-found.module';
 
 function App() {
   const [search, setSearch] = useState("");
@@ -39,16 +40,15 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">{/* <About /> */}</Route>
-          <Route path="/menu">
+          <Route path="*" component={NotFoundModule}></Route>
+          <Route exact path="/about">{/* <About /> */}</Route>
+          <Route exact path="/menu">
             <Menu search={search} meals={meals} order={order} addToOrder={addToOrder}/>
           </Route>
-          <Route path="/checkout">
+          <Route exact path="/checkout">
             <CheckoutModule order={order} meals={meals}/>
           </Route>
-          <Route path="/">
-            <LandingPage />
-          </Route>
+          <Route exact path="/" component={LandingPage}></Route>
         </Switch>
       </div>
       <Footer />
