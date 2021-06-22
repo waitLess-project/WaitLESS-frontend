@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
-import LandingPage from "./pages/landing/LandingPage";
-import Menu from "./components/Menu/Menu";
-import Checkout from "./components/Checkout/Checkout";
+import Footer from "../components/Footer/Footer";
+import LandingPage from "../pages/landing/LandingPage";
+import Menu from "../components/Menu/Menu";
+import CheckoutModule from "./modules/checkout/checkout.module";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -44,7 +44,7 @@ function App() {
             <Menu search={search} meals={meals} order={order} addToOrder={addToOrder}/>
           </Route>
           <Route path="/checkout">
-            <Checkout order={order} meals={meals}/>
+            <CheckoutModule order={order} meals={meals}/>
           </Route>
           <Route path="/">
             <LandingPage />
