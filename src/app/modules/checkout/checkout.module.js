@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "./checkout.style.css";
 import { useHistory } from "react-router-dom";
 
 const Checkout = ({ order, meals }) => {
