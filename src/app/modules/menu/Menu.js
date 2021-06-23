@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import MealCard from "../MealCard/MealCard";
+import MealCard from "../../../components/MealCard/MealCard";
 import "./styles.css";
 
 const Menu = ({ order, meals, search, filter, addToOrder }) => {
