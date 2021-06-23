@@ -6,6 +6,7 @@ import {BasicButton} from '../../shared/components/basic-button/basic-button';
 import {ImageButton} from '../../shared/components/image-button/image-button';
 
 export default class LandingPage extends Component {
+    
     render() {
         return (
             <div className="landingPage">
