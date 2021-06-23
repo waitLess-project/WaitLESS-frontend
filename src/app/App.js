@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import Footer from "./shared/components/footer/footer.module";
 import LandingPage from "./modules/landing/landing.module";
-import Menu from "../components/Menu/Menu";
+import Menu from "../app/modules/menu/Menu";
 import CheckoutModule from "./modules/checkout/checkout.module";
 import NotFoundModule from "../app/layout/not-found/not-found.module";
 
