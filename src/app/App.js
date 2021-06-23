@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 import LandingPage from "./modules/landing/landing.module";
 import Menu from "../components/Menu/Menu";
 import CheckoutModule from "./modules/checkout/checkout.module";
-import NotFoundModule from '../app/layout/not-found/not-found.module';
+import NotFoundModule from "../app/layout/not-found/not-found.module";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -41,15 +41,21 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route exact path="/" component={LandingPage}></Route>
-          <Route path="*" component={NotFoundModule}></Route>
-          <Route exact path="/about">{/* <About /> */}</Route>
+          <Route exact path="/about">
+            {/* <About /> */}
+          </Route>
           <Route exact path="/menu">
-            <Menu search={search} meals={meals} order={order} addToOrder={addToOrder}/>
+            <Menu
+              search={search}
+              meals={meals}
+              order={order}
+              addToOrder={addToOrder}
+            />
           </Route>
           <Route exact path="/checkout">
-            <CheckoutModule order={order} meals={meals}/>
+            <CheckoutModule order={order} meals={meals} />
           </Route>
-          
+          <Route path="*" component={NotFoundModule}></Route>
         </Switch>
       </div>
       <Footer />
