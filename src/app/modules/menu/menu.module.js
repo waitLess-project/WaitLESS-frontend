@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import MealCard from "./components/MealCard";
+import MealCard from "./components/meal-card.module";
+import './menu.styles.css'
 
 export default class Menu extends Component {
   getTotal = () => {
@@ -12,7 +13,7 @@ export default class Menu extends Component {
   };
 
   getOrders = () => {
-    this.props.meals.filter((meal) => {
+    return this.props.meals.filter((meal) => {
       this.props.order.has(meal.id);
     });
   };
@@ -58,7 +59,7 @@ export default class Menu extends Component {
             <div>
               <h4>CART/ORDER</h4>
               <ul>
-                {this.props.getOrders().map((item) => (
+                {this.getOrders().map((item) => (
                   <li key={item.id}>
                     {item.title} - Qty: {this.props.order.get(item.id)}
                   </li>
@@ -66,7 +67,7 @@ export default class Menu extends Component {
               </ul>
               <div>
                 <h4>TOTAL</h4>
-                <span>$ {this.props.getTotal()}</span>
+                <span>$ {this.getTotal()}</span>
               </div>
             </div>
             <Link to="/checkout" props={this.props.order}>

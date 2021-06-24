@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './styles.css'
+import './meal-card.styles.css'
 
 const MealCard = ({ meal, addToOrder, order }) => {
     const [showDetails, setShowDetails] = useState(false)
