@@ -7,6 +7,10 @@ export default class Login extends Component {
     this.state = { username: "", password: "" };
   }
 
+  handleInput = (_) => {
+    this.setState({ [_.target.id]: _.target.value });
+  };
+
   render() {
     return (
       <div>
@@ -18,8 +22,10 @@ export default class Login extends Component {
           </div>
           <input
             type="text"
+            id="username"
             value={this.state.username}
             placeholder="Username"
+            onChange={this.handleInput}
           />
         </div>
         <div className="input-inline-box">
@@ -30,8 +36,10 @@ export default class Login extends Component {
         </div>
         <input
           type="password"
+          id="password"
           value={this.state.password}
           placeholder="Password"
+          onChange={this.handleInput}
         />
       </div>
     );
