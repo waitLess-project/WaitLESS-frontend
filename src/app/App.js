@@ -60,13 +60,8 @@ function App() {
           <Route path="*" component={NotFoundModule}></Route>
         </Switch>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
-
-    // <div className="App">
-    //     <LandingPage />
-    //     <Footer />
-    // </div>
   );
 }
 
