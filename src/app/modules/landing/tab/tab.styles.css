@@ -1,0 +1,11 @@
+.tab {
+  display: flex;
+  width: 500px;
+}
+
+.page-tab {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+}

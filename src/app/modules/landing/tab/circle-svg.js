@@ -3,14 +3,14 @@ import React from "react";
 export default class CircleIcon extends React.Component {
   constructor(props) {
     super(props);
-    this.state = ({
+    this.state = {
       fill: this.props.fill,
-    });
+    };
   }
 
   render() {
     return (
-      <svg height="100" width="100">
+      <svg viewBox="0 0 100 100">
         <circle
           cx="50"
           cy="50"
