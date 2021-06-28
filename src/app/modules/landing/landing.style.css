@@ -11,49 +11,11 @@
   justify-content: center;
   align-items: center;
   height: 100%; /* <--- Extends height to max allowed from outer containing div. Allows WaitLESS big to be in the middle */
+  max-width: 1024px;
+  margin: auto;
 }
 
-.landingPage .waitless-big {
-  padding: 8px;
-  border-radius: 25px;
-  font-weight: bolder;
-  font-size: xx-large;
-  background-color: #daab45;
-  background: linear-gradient(135deg, #daab45 0%, #daab45 50%, #daab45 100%);
-  box-shadow: rgba(8, 8, 8, 0.24) 8px 8px 8px 8px;
-  margin-bottom: 30px;
-}
-
-img.logo {
-  height: 350px;
-  width: 650px;
-  border-radius: 25px;
-}
-
-.landingPage .landingPage-btn {
-  margin: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 20px;
-  padding-left: 20px;
-  border-radius: 5px;
-  background-color: #daab45;
-  border: 2px solid #daab45;
-  color: rgb(14, 13, 13);
-  font-size: 20px;
-  font-weight: 800;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.logo-button {
-  width: auto;
-  border-radius: 18px;
-  background-color: #53534e;
-  border: 2px solid #daab45;
-  color: rgb(223, 220, 198);
-  text-align: center;
-  cursor: pointer;
-  justify-content: center;
-  box-shadow: rgba(8, 8, 8, 0.24) 8px 8px 8px 8px;
+.tab {
+  align-self: flex-end;
+  padding: 20px 10% 20px 0;
 }

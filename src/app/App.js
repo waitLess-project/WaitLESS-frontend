@@ -5,6 +5,7 @@ import LandingPage from "./modules/landing/landing.module";
 import Menu from "../app/modules/menu/menu.module";
 import CheckoutModule from "./modules/checkout/checkout.module";
 import NotFoundModule from "../app/layout/not-found/not-found.module";
+import Login from "./modules/login/login.module";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -41,6 +42,7 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route exact path="/" component={LandingPage}></Route>
+          <Route exact path="/login" component={Login}></Route>
           <Route exact path="/about">
             {/* <About /> */}
           </Route>
@@ -58,13 +60,8 @@ function App() {
           <Route path="*" component={NotFoundModule}></Route>
         </Switch>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
-
-    // <div className="App">
-    //     <LandingPage />
-    //     <Footer />
-    // </div>
   );
 }
 
