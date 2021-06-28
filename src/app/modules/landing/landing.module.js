@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Tab from "./tab/tab.module";
+import Carousel from "./carousel/carousel.module";
 import "./landing.style.css";
 
 import { BasicButton } from "../../shared/components/basic-button/basic-button";
@@ -26,6 +27,7 @@ export default class LandingPage extends Component {
     return (
       <div className="landingPage">
         <Tab page={this.state.page[this.state.index]} />
+        <Carousel />
       </div>
     );
   }

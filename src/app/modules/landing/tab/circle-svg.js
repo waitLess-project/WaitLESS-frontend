@@ -10,11 +10,11 @@ export default class CircleIcon extends React.Component {
 
   render() {
     return (
-      <svg viewBox="0 0 100 100">
+      <svg viewBox="0 0 100 100" style={{maxWidth: "25px"}}>
         <circle
           cx="50"
           cy="50"
-          r="5"
+          r="15"
           stroke="black"
           stroke-width="2"
           fill={this.state.fill ? "none" : "#12110b"}
