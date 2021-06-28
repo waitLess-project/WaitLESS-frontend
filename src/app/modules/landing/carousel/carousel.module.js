@@ -1,10 +1,38 @@
 import React, { Component } from "react";
-import './carousel.styles.css'
+import Tabs from "./tabs.component";
+import "./carousel.styles.css";
 
 export default class Carousel extends Component {
-  render() {
-    return <div className="carousel">
+  pages = [
+    {
+      page: "start",
+      Component: Tabs.Start,
+    },
+    {
+      page: "about",
+      Component: Tabs.About,
+    },
+    {
+      page: "affiliates",
+      Component: Tabs.Affiliates,
+    },
+    {
+      page: "contact",
+      Component: Tabs.Contact,
+    },
+  ];
 
-    </div>;
+  render() {
+    return (
+      <div className="carousel">
+        <div onClick={() => this.props.moveTab(0)}>left</div>
+        {this.pages.map(({ page, Component }) => {
+          if (page === this.props.page) {
+            return <Component />;
+          }
+        })}
+        <div onClick={() => this.props.moveTab(1)}>right</div>
+      </div>
+    );
   }
 }

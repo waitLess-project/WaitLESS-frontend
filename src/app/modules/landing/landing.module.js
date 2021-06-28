@@ -16,18 +16,26 @@ export default class LandingPage extends Component {
     };
   }
 
-  indexChange = () => {
+  // move will be 0 or 1
+  indexChange = (move) => {
     let temp = this.state.index;
-    this.setState({
-      index: temp + 1 >= this.state.page.length ? 0 : temp + 1,
-    });
+
+    if (move) {
+      this.setState({
+        index: temp + 1 >= this.state.page.length ? 0 : temp + 1,
+      });
+    } else {
+      this.setState({
+        index: temp - 1 < 0 ? this.state.page.length - 1 : temp - 1,
+      });
+    }
   };
 
   render() {
     return (
       <div className="landingPage">
         <Tab page={this.state.page[this.state.index]} />
-        <Carousel />
+        <Carousel page={this.state.page[this.state.index]} moveTab={this.indexChange}/>
       </div>
     );
   }
